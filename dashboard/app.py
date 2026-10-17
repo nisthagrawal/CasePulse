@@ -197,7 +197,7 @@ def main():
         base_dir = os.path.join(os.path.dirname(__file__), "..")
         output_dir = os.path.join(base_dir, "output")
         sample_dir = os.path.join(base_dir, "data", "sample")
-        generate_sample_datasets(output_dir, sample_dir, num_cases=40)
+        generate_sample_datasets(output_dir, sample_dir, num_cases=500)
         
         df_cases, df_events, df_orders, df_durations, df_metrics = load_data()
 

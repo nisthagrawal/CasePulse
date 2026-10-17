@@ -57,7 +57,7 @@ def cmd_process_data(args):
     df_durations.to_csv(durations_p, index=False)
     df_metrics.to_csv(metrics_p, index=False)
 
-    print("✅ Data engineering & analytics pipeline successfully completed.")
+    print("[SUCCESS] Data engineering & analytics pipeline successfully completed.")
 
 def cmd_run_dashboard(args):
     app_path = os.path.join(BASE_DIR, "dashboard", "app.py")
@@ -108,7 +108,7 @@ def main():
 
     # generate-sample
     p_samp = subparsers.add_parser("generate-sample", help="Generate synthetic sample dataset")
-    p_samp.add_argument("--num-cases", type=int, default=40, help="Number of sample cases to generate")
+    p_samp.add_argument("--num-cases", type=int, default=500, help="Number of sample cases to generate")
 
     # process-data
     subparsers.add_parser("process-data", help="Execute cleaning, deduplication, and analytics calculations")
